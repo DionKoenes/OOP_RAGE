@@ -8,7 +8,7 @@ public abstract class KillingObstacle : MonoBehaviour
     [SerializeField] protected GameObject Sprite;
     [SerializeField] protected GameObject Trail;
 
-    Animator animator;
+    protected Animator animator;
 
     protected PlayerController speed;
     protected PlayerController jumpForce;
