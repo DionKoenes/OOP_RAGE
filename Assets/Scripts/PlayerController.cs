@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxFallSpeed;
     [SerializeField] private float maxJumpSpeed;
     [SerializeField] private float checkRadius;
+
     [SerializeField] private int jumpsValue;
 
     [SerializeField] private Transform groundCheck;
