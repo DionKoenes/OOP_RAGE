@@ -6,10 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     #region Properties
 
-    [SerializeField] public float speed;
     [SerializeField] private float maxFallSpeed;
     [SerializeField] private float maxJumpSpeed;
-    [SerializeField] public float jumpForce;
     [SerializeField] private float checkRadius;
     [SerializeField] private int jumpsValue;
     [SerializeField] private Transform groundCheck;
@@ -18,15 +16,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsWall;
     [SerializeField] private LayerMask whatIsKillingObstacle;
-
-    private float moveInput;
-
-    private Rigidbody2D rb;
     [SerializeField] private GameObject Sprite;
     [SerializeField] private GameObject Trail;
 
-    private bool faceRight = true;
+    public float speed;
+    public float jumpForce;
 
+    private float moveInput;
+
+    private bool faceRight = true;
     private bool isGrounded;
     private bool isWalledLeft;
     private bool isWalledRight;
@@ -36,24 +34,21 @@ public class PlayerController : MonoBehaviour
 
     private int jumps;
 
-    Animator animator;
+    private Rigidbody2D rb;
+    private Animator animator;
 
     #endregion
 
     // START //
 
-    #region
+    #region Start
     private void Start()
     {
         jumps = jumpsValue;
         rb = GetComponent<Rigidbody2D>();
-    }
-    #endregion
-
-    void Awake()
-    {
         animator = Sprite.GetComponent<Animator>();
     }
+    #endregion
 
     // FIXED UPDATE //
 
