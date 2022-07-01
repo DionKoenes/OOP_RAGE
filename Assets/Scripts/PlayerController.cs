@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
-    private AudioSource playSound;
 
     #endregion
 
@@ -188,6 +187,5 @@ public class PlayerController : MonoBehaviour
         speed = 0;
         jumpForce = 0;
         Trail.SetActive(false);
-        playSound.Play();
     }
 }

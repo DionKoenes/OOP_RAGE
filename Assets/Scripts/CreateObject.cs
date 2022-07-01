@@ -16,7 +16,7 @@ public class CreateObject : MonoBehaviour
     {
         if (col.gameObject.name.Equals("Player"))
         {
-            spriteRenderer.enabled = true;
+            spriteRenderer.enabled = true;                                                                                                                     
         }
     }
 }

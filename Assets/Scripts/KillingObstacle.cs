@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class KillingObstacle : MonoBehaviour
 { 
     [SerializeField] protected LayerMask whatIsKillingObstacle;
+
     [SerializeField] protected GameObject Sprite;
     [SerializeField] protected GameObject Trail;
 
@@ -15,6 +16,7 @@ public abstract class KillingObstacle : MonoBehaviour
 
     protected bool makeContact;
 
+
     private void Start()
     {
         animator = Sprite.GetComponent<Animator>();
@@ -24,8 +26,8 @@ public abstract class KillingObstacle : MonoBehaviour
     {
         if (col.gameObject.name.Equals("Player"))
         {
-            animator.SetTrigger("Death");
             makeContact = true;
+            animator.SetTrigger("Death");
         }
     }
 
