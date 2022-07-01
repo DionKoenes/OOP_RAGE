@@ -12,6 +12,7 @@ public abstract class KillingObstacle : MonoBehaviour
 
     protected PlayerController speed;
     protected PlayerController jumpForce;
+
     protected bool makeContact;
 
     private void Start()
@@ -35,9 +36,7 @@ public abstract class KillingObstacle : MonoBehaviour
 
         if (makeContact)
         {
-            playerScript.speed = 0;
-            playerScript.jumpForce = 0;
-            Trail.SetActive(false);
+            playerScript.Die();
         }
     }
 }

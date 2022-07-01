@@ -6,21 +6,23 @@ public class PlayerController : MonoBehaviour
 {
     #region Properties
 
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
     [SerializeField] private float maxFallSpeed;
     [SerializeField] private float maxJumpSpeed;
     [SerializeField] private float checkRadius;
     [SerializeField] private int jumpsValue;
+
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheckLeft;
     [SerializeField] private Transform wallCheckRight;
+
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsWall;
     [SerializeField] private LayerMask whatIsKillingObstacle;
+
     [SerializeField] private GameObject Sprite;
     [SerializeField] private GameObject Trail;
-
-    public float speed;
-    public float jumpForce;
 
     private float moveInput;
 
@@ -178,4 +180,11 @@ public class PlayerController : MonoBehaviour
         transform.localScale = Scaler;
     }
     #endregion
+
+    public void Die()
+    {
+        speed = 0;
+        jumpForce = 0;
+        Trail.SetActive(false);
+    }
 }

@@ -409,6 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 511219006}
+  - component: {fileID: 511219008}
   - component: {fileID: 511219007}
   m_Layer: 8
   m_Name: Void
@@ -457,6 +458,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1193.1592, y: 69.60101}
   m_EdgeRadius: 0
+--- !u!114 &511219008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511219005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbee16aa762042c4f95ea4047ea5917b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatIsKillingObstacle:
+    serializedVersion: 2
+    m_Bits: 256
+  Sprite: {fileID: 731704711}
+  Trail: {fileID: 428622356}
 --- !u!1 &527860108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,9 +1112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
+  jumpForce: 280
   maxFallSpeed: -420
   maxJumpSpeed: 420
-  jumpForce: 280
   checkRadius: 2
   jumpsValue: 1
   groundCheck: {fileID: 664069935}
