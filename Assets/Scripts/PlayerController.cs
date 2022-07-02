@@ -182,10 +182,14 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    // DIE FUNCTION FOR KILLINGPLATFORM //
+
+    #region Die
     public void Die()
     {
         speed = 0;
         jumpForce = 0;
         Trail.SetActive(false);
     }
+    #endregion
 }

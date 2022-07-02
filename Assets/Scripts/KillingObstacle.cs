@@ -8,8 +8,11 @@ public abstract class KillingObstacle : MonoBehaviour
 
     [SerializeField] protected GameObject Sprite;
     [SerializeField] protected GameObject Trail;
+    [SerializeField] protected GameObject YouDied;
 
     protected Animator animator;
+    protected AudioSource audioSource;
+    protected SpriteRenderer youDiedSprite;
 
     protected PlayerController speed;
     protected PlayerController jumpForce;
@@ -20,6 +23,8 @@ public abstract class KillingObstacle : MonoBehaviour
     private void Start()
     {
         animator = Sprite.GetComponent<Animator>();
+        audioSource = Sprite.GetComponent<AudioSource>();
+        youDiedSprite = YouDied.GetComponent<SpriteRenderer>();
     }
 
     protected void OnCollisionEnter2D(Collision2D col)
@@ -28,6 +33,8 @@ public abstract class KillingObstacle : MonoBehaviour
         {
             makeContact = true;
             animator.SetTrigger("Death");
+            audioSource.Play();
+            youDiedSprite.enabled = true;
         }
     }
 
